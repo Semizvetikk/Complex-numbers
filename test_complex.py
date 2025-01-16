@@ -9,7 +9,6 @@ class TestComplex(unittest.TestCase):
         result = c1 + c2
         self.assertEqual(str(result), "(1.1666666666666667 + 1.55i)")
 
-        # Сложение с int
         result = c1 + 2
         self.assertEqual(str(result), "(2.5 + 0.75i)")
 
@@ -29,7 +28,6 @@ class TestComplex(unittest.TestCase):
         result = c1 * c2
         self.assertEqual(str(result), "(-0.26666666666666666 + 0.9i)")
 
-        # Умножение на int
         result = c1 * 2
         self.assertEqual(str(result), "(1.0 + 1.5i)")
 
@@ -39,7 +37,6 @@ class TestComplex(unittest.TestCase):
         result = c1 / c2
         self.assertEqual(str(result), "(0.860655737704918 + 0.09221311475409837i)")
 
-        # Деление на int
         result = c1 / 2
         self.assertEqual(str(result), "(0.25 + 0.375i)")
 
@@ -49,7 +46,6 @@ class TestComplex(unittest.TestCase):
         with self.assertRaises(ZeroDivisionError):
             c1 / c2
 
-        # Деление на ноль (скаляр)
         with self.assertRaises(ZeroDivisionError):
             c1 / 0
 
@@ -58,7 +54,6 @@ class TestComplex(unittest.TestCase):
         result = c ** 2
         self.assertEqual(str(result), "(-0.3125 + 0.75i)")
 
-        # Отрицательная степень
         result = c ** -2
         self.assertEqual(str(result), "(-0.019201316803170883 - 2.2945171878600856i)")
 

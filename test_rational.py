@@ -148,7 +148,6 @@ class TestRational(unittest.TestCase):
         self.assertEqual(result.numerator, 10**100)
         self.assertEqual(result.denominator, 1)
 
-    # проверка на переполнение
     def test_overflow(self):
         r1 = Rational(10 ** 1000, 10 ** 500)
         r2 = Rational(10 ** 500, 10 ** 1000)
